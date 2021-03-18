@@ -34,7 +34,7 @@ class HomeScreenMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      children: <Widget>[
+      children: [
         Container(
           height: 280.0,
           width: double.infinity,

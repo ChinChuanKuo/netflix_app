@@ -5,9 +5,8 @@ class DesktopAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 60.0),
+      padding: const EdgeInsets.symmetric(horizontal: 30.0),
       height: 65.0,
-      decoration: BoxDecoration(color: Colors.white),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -16,7 +15,7 @@ class DesktopAppBar extends StatelessWidget {
               Palette.title,
               style: TextStyle(
                 color: Palette.facebookBlue,
-                fontSize: 45.0,
+                fontSize: 35.0,
                 fontWeight: FontWeight.bold,
                 letterSpacing: -1.2,
               ),

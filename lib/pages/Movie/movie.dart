@@ -21,9 +21,9 @@ class _MovieScreenState extends State<MovieScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: ListView(
-        children: <Widget>[
+        children: [
           Stack(
-            children: <Widget>[
+            children: [
               Container(
                 transform: Matrix4.translationValues(0.0, -50.0, 0.0),
                 child: Hero(
@@ -40,33 +40,35 @@ class _MovieScreenState extends State<MovieScreen> {
                   ),
                 ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  IconButton(
-                    padding: EdgeInsets.only(left: 30.0),
-                    onPressed: () => Navigator.pop(context),
-                    icon: Icon(Icons.arrow_back),
-                    iconSize: 30.0,
-                    color: Colors.black,
-                  ),
-                  Text(
-                    Palette.title,
-                    style: TextStyle(
-                      color: Palette.facebookBlue,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 35.0,
-                      letterSpacing: -1.2,
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                height: 65.0,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    IconButton(
+                      icon: Icon(Icons.arrow_back),
+                      iconSize: 25.0,
+                      color: Colors.black,
+                      onPressed: () => Navigator.pop(context),
                     ),
-                  ),
-                  IconButton(
-                    padding: EdgeInsets.only(left: 30.0),
-                    onPressed: () => print('Add to Favorites'),
-                    icon: Icon(Icons.favorite_border),
-                    iconSize: 30.0,
-                    color: Colors.black,
-                  ),
-                ],
+                    Text(
+                      Palette.title,
+                      style: TextStyle(
+                        color: Palette.facebookBlue,
+                        fontSize: 35.0,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: -1.2,
+                      ),
+                    ),
+                    IconButton(
+                      icon: Icon(Icons.favorite_border),
+                      iconSize: 25.0,
+                      color: Colors.black,
+                      onPressed: () => print('Add to Favorites'),
+                    ),
+                  ],
+                ),
               ),
               Positioned.fill(
                 bottom: 10.0,
@@ -75,44 +77,45 @@ class _MovieScreenState extends State<MovieScreen> {
                   child: RawMaterialButton(
                     padding: EdgeInsets.all(10.0),
                     elevation: 12.0,
-                    onPressed: () => print('Play Video'),
                     shape: CircleBorder(),
                     fillColor: Colors.white,
                     child: Icon(
                       Icons.play_arrow,
-                      size: 60.0,
+                      size: 50.0,
                       color: Colors.red,
                     ),
+                    onPressed: () => print('Play Video'),
                   ),
                 ),
               ),
               Positioned(
                 bottom: 0.0,
-                left: 20.0,
+                left: 25.0,
                 child: IconButton(
-                  onPressed: () => print('Add to My List'),
                   icon: Icon(Icons.add),
-                  iconSize: 40.0,
+                  iconSize: 30.0,
                   color: Colors.black,
+                  onPressed: () => print('Add to My List'),
                 ),
               ),
               Positioned(
                 bottom: 0.0,
                 right: 25.0,
                 child: IconButton(
-                  onPressed: () => print('Share'),
                   icon: Icon(Icons.share),
-                  iconSize: 35.0,
+                  iconSize: 30.0,
                   color: Colors.black,
+                  onPressed: () => print('Share'),
                 ),
               ),
             ],
           ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 20.0),
+            padding:
+                const EdgeInsets.symmetric(horizontal: 40.0, vertical: 20.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
+              children: [
                 Text(
                   widget.movie.title.toUpperCase(),
                   style: TextStyle(
@@ -137,9 +140,9 @@ class _MovieScreenState extends State<MovieScreen> {
                 SizedBox(height: 15.0),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
+                  children: [
                     Column(
-                      children: <Widget>[
+                      children: [
                         Text(
                           'Year',
                           style: TextStyle(
@@ -158,7 +161,7 @@ class _MovieScreenState extends State<MovieScreen> {
                       ],
                     ),
                     Column(
-                      children: <Widget>[
+                      children: [
                         Text(
                           'Country',
                           style: TextStyle(
@@ -177,7 +180,7 @@ class _MovieScreenState extends State<MovieScreen> {
                       ],
                     ),
                     Column(
-                      children: <Widget>[
+                      children: [
                         Text(
                           'Length',
                           style: TextStyle(

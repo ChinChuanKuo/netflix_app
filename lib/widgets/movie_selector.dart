@@ -37,7 +37,7 @@ class MovieSelector extends StatelessWidget {
           ),
         ),
         child: Stack(
-          children: <Widget>[
+          children: [
             Center(
               child: Container(
                 margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 20.0),

@@ -13,8 +13,8 @@ class _DefaultScreenState extends State<DefaultScreen> {
     final Size screenSize = MediaQuery.of(context).size;
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size(screenSize.width, 65.0),
-        child: Responsive.isMobile(context) ? MobileAppBar() : DesktopAppBar(),
+        preferredSize: Size(screenSize.width, 100.0),
+        child: Responsive.isDesktop(context) ? DesktopAppBar() : MobileAppBar(),
       ),
       body: HomeScreen(),
     );
